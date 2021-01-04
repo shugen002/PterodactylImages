@@ -7,8 +7,9 @@ FROM        openjdk:11-slim
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
-RUN cp -rf ./sources.list /etc/apt/sources.list \
- && apt-get update -y \
+COPY ./sources.list /etc/apt/sources.list
+
+RUN apt-get update -y \
  && apt-get install -y curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 \
  && useradd -d /home/container -m container
  
