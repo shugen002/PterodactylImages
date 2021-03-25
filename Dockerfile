@@ -3,7 +3,7 @@
 # Environment: Java (glibc support)
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM        openjdk:11-slim
+FROM        openjdk:14-slim
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
