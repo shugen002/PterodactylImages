@@ -7,8 +7,6 @@ FROM        openjdk:17-slim
 
 LABEL       author="Michael Parker" maintainer="parker@pterodactyl.io"
 
-COPY ./sources.list /etc/apt/sources.list
-
 RUN apt-get update -y \
  && apt-get install -y curl ca-certificates openssl git tar sqlite3 fontconfig tzdata iproute2 \
  && useradd -d /home/container -m container
